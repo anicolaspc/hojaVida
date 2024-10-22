@@ -28,6 +28,7 @@ a {
 .cabecera {
     margin: 0 -50px;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
@@ -44,6 +45,7 @@ a {
 }
 
 .navegacion__lista {
+    padding: 0;
     display: none;
 }
 
@@ -277,6 +279,7 @@ footer {
 @media (min-width: 768px) {
     .cabecera {
         align-items: center;
+        flex-direction: row;
     }
 
     .cabecera__titulo {
