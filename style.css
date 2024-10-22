@@ -64,8 +64,8 @@ a {
 }
 
 .presentacion__foto {
-    width: 20vw;
-    height: 20vw;
+    width: 30vw;
+    height: 30vw;
     object-fit: cover;
     object-position: top;
     border-radius: 50%;
@@ -292,13 +292,13 @@ footer {
     }
     
     .presentacion__contenedor{
-        width: 75%;
+        width: 65%;
     }
     
     .presentacion__foto {
         align-self: center;
-        width: 20vw;
-        height: 20vw;
+        /* width: 30vw;
+        height: 30vw; */
     }
 
 }
@@ -332,12 +332,12 @@ footer {
     }
 
     .presentacion__foto{
-        width: 30vw;
-        height: 30vw;
+        width: 20vw;
+        height: 20vw;
     }
     
     .presentacion__contenedor{
-        width: 65%;
+        width: 75%;
     }
 
     .formacion__lista{
