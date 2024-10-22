@@ -36,7 +36,6 @@ a {
 
 .cabecera__logo {
     max-width: 80px;
-    /* Ajuste para pantallas pequeñas */
 }
 
 .cabecera__titulo {
@@ -57,18 +56,21 @@ a {
 .presentacion {
     padding: 10px 0;
     display: flex;
-    flex-direction: row-reverse;
-    gap: 50px;
+    flex-direction: column;
     overflow: hidden;
-    height: 250px;
+    height: auto;
 }
 
 .presentacion__foto {
-    width: 600px;
-    height: auto;
+    width: 20vw;
+    height: 20vw;
     object-fit: cover;
     object-position: top;
     border-radius: 50%;
+}
+
+.presentacion__subtitulo{
+    text-align: justify;
 }
 
 .redes {
@@ -79,143 +81,153 @@ a {
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
 
-.sobre-mi__texto{
+.sobre-mi__texto {
     text-align: justify;
 }
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
 
-.habilidades{
+.habilidades {
     display: flex;
     flex-direction: column;
 }
 
-.habilidades__titulo{
+.habilidades__titulo {
     text-align: center;
 }
 
-.habilidades__lista{
+.habilidades__lista {
     padding: 0;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.habilidades__elemento{
+.habilidades__elemento {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.habilidades__elemento i{
+.habilidades__elemento i {
     font-size: 50px;
 }
 
 /*------------------------------ Sección de Aficiones --------------------------------*/
 
-.aficiones{
+.aficiones {
     display: flex;
     flex-direction: column;
 }
 
-.aficiones__titulo{
+.aficiones__titulo {
     text-align: center;
 }
 
-.aficiones__lista{
+.aficiones__lista {
     padding: 0;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.aficiones__elemento{
+.aficiones__elemento {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.aficiones__elemento i{
+.aficiones__elemento i {
     font-size: 50px;
 }
 
 /*------------------------------ Sección de Formación --------------------------------*/
 
-.formacion{
+.formacion {
     display: flex;
     flex-direction: column;
 }
 
-.formacion__titulo{
+.formacion__titulo {
     text-align: center;
 }
 
-.formacion__lista{
+.formacion__lista {
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
-.formacion__elemento{
+.formacion__elemento {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.formacion__icono{
-    width: 300px;
+.formacion__icono {
+    width: 50vw;
 }
 
-.formacion__instituto{
+.formacion__instituto {
     text-align: center;
 }
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
 
-.proyectos{
+.proyectos {
     display: flex;
     flex-direction: column;
 }
 
-.proyectos__titulo{
+.proyectos__titulo {
     text-align: center;
 }
 
-.proyectos__lista{
+.proyectos__elemento {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.proyectos__lista {
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.proyectos__link {
     display: flex;
     justify-content: space-evenly;
 }
 
-.proyectos__link{
-    display: flex;
-    justify-content: space-between;
-}
-
-.proyectos__repo{
+.proyectos__repo {
     padding: 5px;
     color: #2A7AE4;
     border: 2px #2A7AE4 solid;
 }
 
-.proyectos__repo:hover{
-    color:#ffffff;
+.proyectos__repo:hover {
+    color: #ffffff;
     background-color: #2A7AE4;
     border: 2px #2A7AE4 solid;
 }
 
-.proyectos__demo{
+.proyectos__demo {
     padding: 5px;
-    color:#ffffff;
+    color: #ffffff;
     background-color: #2A7AE4;
     border: 2px #2A7AE4 solid;
 }
 
-.proyectos__demo:hover{
+.proyectos__demo:hover {
     color: #2A7AE4;
     background-color: #ffffff;
     border: 2px #2A7AE4 solid;
 }
-
-/*------------------------------ Sección de Contacto ---------------------------------*/
 
 /*-------------------------------------- footer --------------------------------------*/
 footer {
@@ -264,17 +276,41 @@ footer {
 /* Tablets y pantallas más grandes */
 @media (min-width: 768px) {
     .cabecera {
-        flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-    }
-
-    .cabecera__logo {
-        max-width: 100px;
     }
 
     .cabecera__titulo {
         font-size: 1.5rem;
+    }
+
+    .presentacion {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    
+    .presentacion__contenedor{
+        width: 75%;
+    }
+    
+    .presentacion__foto {
+        align-self: center;
+        width: 20vw;
+        height: 20vw;
+    }
+
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1.1rem;
     }
 
     .navegacion__lista {
@@ -284,20 +320,28 @@ footer {
         margin-top: 0;
     }
 
-    .navegacion__elemento a {
-        font-size: 1rem;
-    }
-}
-
-/* Pantallas grandes */
-@media (min-width: 1024px) {
-
-    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
-    .cabecera__titulo {
-        font-size: 1.8rem;
+    .presentacion__titulo{
+        font-size: 36px;
     }
 
-    .navegacion__elemento a {
-        font-size: 1.1rem;
+    .presentacion__foto{
+        width: 30vw;
+        height: 30vw;
+    }
+    
+    .presentacion__contenedor{
+        width: 65%;
+    }
+
+    .formacion__lista{
+        flex-direction: row;
+    }
+
+    .formacion__icono{
+        width: 40vw;
+    }
+
+    .proyectos__lista{
+        flex-direction: row;
     }
 }
