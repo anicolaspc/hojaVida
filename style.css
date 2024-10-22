@@ -278,7 +278,7 @@ footer {
 /* Tablets y pantallas más grandes */
 @media (min-width: 768px) {
     .cabecera {
-        justify-content: center;
+        justify-content: center; 
         flex-direction: row;
     }
     
